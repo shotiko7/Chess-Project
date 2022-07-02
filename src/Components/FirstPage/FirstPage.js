@@ -10,7 +10,7 @@ import Chess from './FirstPageAssets/Chess.png'
 import Header from './Header.js'
 import Next from "./FirstPageAssets/Next.png"
 
-function FirstPage(props) {
+function FirstPage() {
     let navigate = useNavigate()
   return (
     <div className='maindiv'>
