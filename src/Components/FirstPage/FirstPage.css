@@ -29,7 +29,7 @@
     height: 109px;
     left: 200px;
     top: 265px;
-    font-family: 'Nunito';
+    font-family: 'Nunito Sans', sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 80px;
@@ -43,7 +43,7 @@
     height: 27px;
     left: 700px;
     top: 300px;
-    font-family: 'Nunito';
+    font-family: 'Nunito Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -57,13 +57,14 @@
     height: 109px;
     left: 150px;
     top: 350px;
-    font-family: 'Nunito';
+    font-family: 'Nunito Sans', sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 80px;
     line-height: 109px;
     text-transform: uppercase;
     color: #FFFFFF;
+    
 }
 .rightdiv button {
     position: absolute;
@@ -81,6 +82,12 @@
     height: 24px;
 }
 .rightdiv button p {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-transform: capitalize;
     width: 100px;
     color: #FFFFFF;
 }
