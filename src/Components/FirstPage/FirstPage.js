@@ -1,10 +1,16 @@
 import React from 'react';
+import {
+    BrowserRouter as Router,
+    useNavigate,
+    Route,
+    Routes,
+  } from "react-router-dom";
 import "./FirstPage.css";
 import Chess from './FirstPageAssets/Chess.png'
 import Header from './Header.js'
 import Next from "./FirstPageAssets/Next.png"
 
-function FirstPage() {
+function FirstPage(props) {
   return (
     <div className='maindiv'>
         <div className='parentdiv'>
@@ -18,7 +24,7 @@ function FirstPage() {
                     <h4> a lot about </h4> 
                 </div> 
                 <h3> who we are </h3>
-                <button> 
+                <button onClick={props.onClick}> 
                     <p> Get Started </p>
                     <img src={Next} alt="next" />
                 </button> 

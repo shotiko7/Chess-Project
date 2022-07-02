@@ -1,6 +1,10 @@
-import ReactDOM from 'react-dom';
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  useNavigate,
+  Route,
+  Routes,
+} from "react-router-dom";
+import Err from "./Components/Err";
 import FirstPage from "./Components/FirstPage/FirstPage";
 import Second from './Components/SecondFolder/Second';
 
@@ -8,10 +12,11 @@ function App() {
   
   return (
     <Router>
-      <Switch>
-      <Route exact path="/Firstpage" component={FirstPage} />
-      <Route exact path="/Secondpage" component={Second} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<FirstPage />} />
+        <Route path="/secondpage" element={<Second />} />
+        <Route path="*" element={<Err />}/>
+      </Routes>
     </Router>
   );
 }
