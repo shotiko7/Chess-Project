@@ -1,6 +1,5 @@
 import {
   BrowserRouter as Router,
-  useNavigate,
   Route,
   Routes,
 } from "react-router-dom";

@@ -11,6 +11,7 @@ import Header from './Header.js'
 import Next from "./FirstPageAssets/Next.png"
 
 function FirstPage(props) {
+    let navigate = useNavigate()
   return (
     <div className='maindiv'>
         <div className='parentdiv'>
@@ -24,7 +25,9 @@ function FirstPage(props) {
                     <h4> a lot about </h4> 
                 </div> 
                 <h3> who we are </h3>
-                <button onClick={props.onClick}> 
+                <button onClick={()=> {
+                    navigate("/secondpage")
+                }}> 
                     <p> Get Started </p>
                     <img src={Next} alt="next" />
                 </button> 
