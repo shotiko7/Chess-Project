@@ -1,0 +1,41 @@
+.maindiv {
+    width: 1920px;
+    height: 1080px;
+    border: 2px solid green;
+    display: flex;
+}
+.leftdiv {
+    position: relative;
+    width: 923px;
+}
+.leftdiv img  {
+    position: absolute;
+    width: 923px;
+    height: 996px;
+    left: 0px;
+    top: 84px;
+}
+
+.rightdiv {
+    position: absolute;
+    width: 997px;
+    height: 1080px;
+    left: 923px;
+    top: 0px;
+    border: 1px solid aqua;
+    background-color: #FD5334;
+}
+.rightdivtext h2 {
+    position: absolute;
+    width: 496px;
+    height: 109px;
+    left: 1008px;
+    top: 265px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 109px;
+    text-transform: uppercase;
+    
+}

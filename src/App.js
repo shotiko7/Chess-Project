@@ -1,7 +1,10 @@
+import ReactDOM from 'react-dom';
+import FirstPage from "./Components/FirstPage/FirstPage";
+
 function App() {
   return (
     <div>
-      <h1> NewProject </h1>
+      <FirstPage />
     </div>
   );
 }

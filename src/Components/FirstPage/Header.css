@@ -1,0 +1,21 @@
+.maindivheader {
+    width: 923px;
+    height: 84px;
+    background: #7025FB;
+}
+.parentdivheader {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+.parentdivheader img {
+    background-color: red;
+    color: red;
+}
+.parentdivheader h1 {
+    width: 252.82px;
+    height: 23.35px;
+    color: #FFFFFF;
+}
