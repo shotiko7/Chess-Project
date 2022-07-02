@@ -5,7 +5,6 @@
     display: flex;
 }
 .leftdiv {
-    position: relative;
     width: 923px;
 }
 .leftdiv img  {
@@ -15,7 +14,6 @@
     left: 0px;
     top: 84px;
 }
-
 .rightdiv {
     position: absolute;
     width: 997px;
@@ -29,7 +27,7 @@
     position: absolute;
     width: 496px;
     height: 109px;
-    left: 1008px;
+    left: 200px;
     top: 265px;
     font-family: 'Nunito';
     font-style: normal;
@@ -37,5 +35,52 @@
     font-size: 80px;
     line-height: 109px;
     text-transform: uppercase;
-    
+    color: #FFFFFF;
+}
+.rightdivtext h4 {
+    position: absolute;
+    width: 136px;
+    height: 27px;
+    left: 700px;
+    top: 300px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    text-transform: uppercase;
+    color: #212529;
+}
+.rightdiv h3 {
+    position: absolute;
+    width: 600px;
+    height: 109px;
+    left: 150px;
+    top: 350px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 109px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.rightdiv button {
+    position: absolute;
+    width: 191px;
+    height: 53px;
+    left: 100px;
+    top: 601px;
+    background: #212529;
+    border-radius: 8px;
+    display: flex;
+    padding: 5px;
+}
+.rightdiv button img {
+    width: 24px;
+    height: 24px;
+}
+.rightdiv button p {
+    width: 100px;
+    color: #FFFFFF;
 }
