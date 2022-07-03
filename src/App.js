@@ -6,6 +6,7 @@ import {
 import Err from "./Components/Err";
 import FirstPage from "./Components/FirstPage/FirstPage";
 import Second from './Components/SecondFolder/Second';
+import Third from "./Components/Third/Third";
 
 function App() {
   
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<FirstPage />} />
         <Route path="/secondpage" element={<Second />} />
+        <Route path="/thirdpage" element={<Third />} />
         <Route path="*" element={<Err />}/>
       </Routes>
     </Router>

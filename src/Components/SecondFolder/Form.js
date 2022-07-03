@@ -54,31 +54,30 @@ function Form() {
         required: true
     }
    ]
+   
+   
    const submit =(e)=>{
         e.preventDefault()
-        console.log(values)
+        navigate('/thirdpage')
    }
    const onChange =(e)=>{
     setValues({...values, [e.target.name]: e.target.value})
    }
-//    console.log(values)
-   
+
   return (
     <div>
         <form onSubmit={submit} className="form" >
             {inputs.map((input) =>{
                 return (<InputForm key={input.id} {...input} onChange={onChange} value={values[input.name]} />)
             })}
-            <div className='submitpage'>
+            <button className='nextpage'> Next <img src={Next} alt="NextPage"/> </button>
+        </form>
+        <div className='submitpage'>
                 <button className='backpage' onClick={()=> {
                     navigate("/")
                 }}>  Back </button>
-                <button className='nextpage' onClick={()=> {
-                    navigate("/")
-                }}> Next <img src={Next} alt="NextPage"/> </button>
-            </div>
-            
-        </form>
+                {/* <button className='nextpage'> Next <img src={Next} alt="NextPage"/> </button> */}
+        </div>
     </div>
   )
 }

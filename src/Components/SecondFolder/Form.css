@@ -29,9 +29,12 @@ form img {
     justify-content: space-between;
     position: absolute;
     top: 350px;
+    left: 50px;
 }
 .backpage {
     background: #F5F5F5;
+    position: absolute;
+    top: 400px;
     border-radius: 8px;
     width: 128px;
     height: 53px;
@@ -45,7 +48,8 @@ form img {
 }
 .nextpage {
     position: absolute;
-    left: 600px;
+    left: 580px;
+    top: 350px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
