@@ -2,6 +2,7 @@ import React from 'react'
 import vector from "../FirstPage/FirstPageAssets/Vector.png"
 import "../SecondFolder/Second.css"
 import chess from "../SecondFolder/SecondFolderAssets/secondches.png"
+import Form from '../SecondFolder/Form.js'
 
 function Second() {
   return (
@@ -31,6 +32,7 @@ function Second() {
               <h2 className='informationh2'> Personal information </h2>
               <p className='informationp'> This is basic informaton fields </p>
           </div>
+          <Form />
       </div>
     </div>
   )
