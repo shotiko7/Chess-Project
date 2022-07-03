@@ -1,10 +1,18 @@
 import React, { useState} from 'react'
+import {
+    BrowserRouter as Router,
+    useNavigate,
+    Route,
+    Routes,
+  } from "react-router-dom";
 import "../SecondFolder/Form.css"
 import green from "../SecondFolder/SecondFolderAssets/Clicki.png"
-import Input from '../SecondFolder/Input.js'
+import Next from "../SecondFolder/SecondFolderAssets/Next.png"
+import InputForm from '../SecondFolder/InputForm.js'
 
-
+    
 function Form() {
+    let navigate = useNavigate()
    const [values, setValues] = useState({
     username: "",
     email: "",
@@ -16,25 +24,62 @@ function Form() {
         id:1,
         name: 'username',
         type: 'text',
-        placeholder: "Username"
+        errorMessage: "Is required! Minimal simbol should be 2",
+        pattern: "^[A-Za-z]{2,16}$",
+        placeholder: "Username",
+        required: true
     },
     {
         id:2,
         name: 'email',
         type: 'email',
-        placeholder: "Email address *"
+        errorMessage: "Please Enter Valid Email Adress",
+        placeholder: "Email address *",
+        required: true
     },
     {
         id:3,
         name: 'number',
         type: 'number',
-        placeholder: "Phone Number *"
+        errorMessage: "Phone number quantity should be exatly 9!",
+        placeholder: "Phone Number *",
+        required: true
+    },  
+    {
+        id:4,
+        name: 'date',
+        type: 'date',
+        errorMessage: "Data is Required",
+        placeholder: "Date of Birth *",
+        required: true
     }
    ]
+   const submit =(e)=>{
+        e.preventDefault()
+        console.log(values)
+   }
+   const onChange =(e)=>{
+    setValues({...values, [e.target.name]: e.target.value})
+   }
+//    console.log(values)
+   
   return (
-    <form className='form'>
-       <Input placeholder="username" />
-    </form>
+    <div>
+        <form onSubmit={submit} className="form" >
+            {inputs.map((input) =>{
+                return (<InputForm key={input.id} {...input} onChange={onChange} value={values[input.name]} />)
+            })}
+            <div className='submitpage'>
+                <button className='backpage' onClick={()=> {
+                    navigate("/")
+                }}>  Back </button>
+                <button className='nextpage' onClick={()=> {
+                    navigate("/")
+                }}> Next <img src={Next} alt="NextPage"/> </button>
+            </div>
+            
+        </form>
+    </div>
   )
 }
 
