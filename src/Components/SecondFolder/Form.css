@@ -12,7 +12,7 @@
     border: 0px solid;
     border-bottom: 1px solid gray;
 }
-.formname {
+.formtype {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,4 +20,7 @@
 form img {
     width: 20px;
     height: 20px;
+}
+.errormessage {
+    border-bottom-color: brown;
 }

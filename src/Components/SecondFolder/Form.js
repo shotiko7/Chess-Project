@@ -1,27 +1,39 @@
-import React from 'react'
+import React, { useState} from 'react'
 import "../SecondFolder/Form.css"
 import green from "../SecondFolder/SecondFolderAssets/Clicki.png"
+import Input from '../SecondFolder/Input.js'
+
 
 function Form() {
+   const [values, setValues] = useState({
+    username: "",
+    email: "",
+    number: "",
+    date: ""
+   })
+   const inputs = [
+    {
+        id:1,
+        name: 'username',
+        type: 'text',
+        placeholder: "Username"
+    },
+    {
+        id:2,
+        name: 'email',
+        type: 'email',
+        placeholder: "Email address *"
+    },
+    {
+        id:3,
+        name: 'number',
+        type: 'number',
+        placeholder: "Phone Number *"
+    }
+   ]
   return (
     <form className='form'>
-        <div className='formname'>
-            <input placeholder='Name *' type='text' name='name' sds/>
-            <img src={green} alt="green" />
-        </div>
-        <div>
-            <input placeholder='Email Adress *' type='email' name='email'/>
-            <img src={green} alt="green" />
-        </div>
-        <div>
-            <input placeholder='Phone Number *' type='number' name='number '/>
-            <img src={green} alt="green" />
-        </div>
-        <div>
-            <input placeholder='Date of Birth *' type='date' name="DateOfBirth" />
-            <img src={green} alt="green" />
-        </div>
-       
+       <Input placeholder="username" />
     </form>
   )
 }
