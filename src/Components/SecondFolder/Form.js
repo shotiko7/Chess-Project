@@ -76,7 +76,6 @@ function Form() {
                 <button className='backpage' onClick={()=> {
                     navigate("/")
                 }}>  Back </button>
-                {/* <button className='nextpage'> Next <img src={Next} alt="NextPage"/> </button> */}
         </div>
     </div>
   )

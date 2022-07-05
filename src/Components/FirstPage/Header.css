@@ -2,20 +2,28 @@
     width: 923px;
     height: 84px;
     background: #7025FB;
+    display: flex;
+    align-items: center;
 }
 .parentdivheader {
     display: flex;
-    justify-content: flex-start;
-    padding-top: 30px;
-    padding-left: 30px;
-    padding-bottom: 30px;
-}
-.parentdivheader img {
-    background-color: red;
-    color: red;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    
 }
 .parentdivheader h1 {
+    position: absolute;
     width: 252.82px;
     height: 23.35px;
+    left: 22.93px;
+    top: 0px;
     color: #FFFFFF;
+    
+}
+.parentdivheader img {
+    position: absolute;
+    top: 1.21%;
+    left: 50px;
+    
 }
