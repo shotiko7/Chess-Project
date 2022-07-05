@@ -59,6 +59,7 @@ function Form() {
    const submit =(e)=>{
         e.preventDefault()
         navigate('/thirdpage')
+        console.log(values)
    }
    const onChange =(e)=>{
     setValues({...values, [e.target.name]: e.target.value})

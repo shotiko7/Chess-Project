@@ -1,0 +1,6 @@
+.maindivthird {
+    width: 1920px;
+    height: 1080px;
+    border: 1px solid green;
+    display: flex;
+}
