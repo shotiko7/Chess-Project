@@ -1,0 +1,26 @@
+.fourth {
+    width: 1920px;
+    height: 1080px;
+    border: 2px solid aqua;
+    display: flex;
+}
+
+.fourth2 {
+    width: 923px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fourth2 h2 {
+    width: 402px;
+    height: 54px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 150%;
+    color: #000000;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
