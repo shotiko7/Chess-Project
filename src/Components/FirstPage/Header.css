@@ -23,7 +23,11 @@
 }
 .parentdivheader img {
     position: absolute;
-    top: 1.21%;
+    width: 15px;
+    height: 18px;
+    color: #FFFFFF;
+    top: 0px;
     left: 50px;
+
     
 }

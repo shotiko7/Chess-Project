@@ -1,17 +1,14 @@
 import React from 'react'
-import vector from "../FirstPage/FirstPageAssets/Vector.png"
 import "../SecondFolder/Second.css"
 import chess from "../SecondFolder/SecondFolderAssets/secondches.png"
 import Form from '../SecondFolder/Form.js'
+import Header from '../FirstPage/Header'
 
 function Second() {
   return (
     <div className='secondmain'> 
       <div className='secondleft'>
-        <div className='secondup'>
-          <img src={vector} alt="vectori" />
-          <h2> Redberry Knight Cup </h2>
-        </div>
+        <Header />
         <div className='seconddown'>
           <img src={chess} alt="chessecond" />
           <h2> “When you see a good move, look for a better one.” </h2>

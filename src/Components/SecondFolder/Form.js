@@ -1,4 +1,4 @@
-import React, { useState} from 'react'
+import React, { useEffect, useState} from 'react'
 import {
     BrowserRouter as Router,
     useNavigate,
@@ -40,7 +40,7 @@ function Form() {
     {
         id:3,
         name: 'number',
-        type: 'number',
+        type: 'text',
         errorMessage: "Phone number quantity should be exatly 9!",
         placeholder: "Phone Number *",
         required: true
@@ -55,7 +55,6 @@ function Form() {
     }
    ]
    
-   
    const submit =(e)=>{
         e.preventDefault()
         navigate('/thirdpage')
@@ -64,7 +63,15 @@ function Form() {
    const onChange =(e)=>{
     setValues({...values, [e.target.name]: e.target.value})
    }
-
+   useEffect(() => {
+    const items = JSON.parse(localStorage.getItem('items'));
+    if (items) {
+     setValues(items);
+    }
+  }, []);
+   useEffect(()=>{
+    localStorage.setItem("items", JSON.stringify(values))
+   },[values])
   return (
     <div>
         <form onSubmit={submit} className="form" >
@@ -81,5 +88,6 @@ function Form() {
     </div>
   )
 }
+
 
 export default Form

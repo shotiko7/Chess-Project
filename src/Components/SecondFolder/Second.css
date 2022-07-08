@@ -1,10 +1,10 @@
 .secondmain {
-    border: 1px solid blue;
     width: 1920px;
     height: 1080px;
     display: flex;
 }
-.secondup {
+/* .secondup {
+    position: relative;
     display: flex;
     width: 923px;
     height: 84px;
@@ -13,15 +13,18 @@
     align-items: center;
 }
 .secondup h2 {
+    position: absolute;
     width: 252.82px;
     height: 23.35px;
     color: #FFFFFF;
 }
 .secondup img {
+    position: absolute;
     color: #7025FB;
     width: 15px;
     height: 18px;
-}
+    left: 30px;
+} */
 .seconddown img {
     position: relative;
     width: 923px;

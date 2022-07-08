@@ -1,5 +1,50 @@
 .select {
     position: absolute;
+    display: flex;
+    width: 392px;
+    height: 46px;
+    background: #FFFFFF;
+    box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.125);
+    border-radius: 0px;
     top: 450px;
     left: 50px;
+}
+.select select {
+    width: 392px;
+    height: 46px;
+    background: #FFFFFF;
+    box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.125);
+    border-radius: 0px;
+    border: 0px;
+}
+.select select option {
+    width: 121px;
+    height: 30px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: #000000;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.deadlinelevel {
+    width: 312px;
+    height: 30px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: #212529;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+.select2 {
+    position: absolute;
+    left: 430px;
 }
