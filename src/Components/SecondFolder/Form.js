@@ -59,19 +59,12 @@ function Form() {
         e.preventDefault()
         navigate('/thirdpage')
         console.log(values)
+        localStorage.setItem('input-value', JSON.stringify(values))
    }
    const onChange =(e)=>{
     setValues({...values, [e.target.name]: e.target.value})
    }
-   useEffect(() => {
-    const items = JSON.parse(localStorage.getItem('items'));
-    if (items) {
-     setValues(items);
-    }
-  }, []);
-   useEffect(()=>{
-    localStorage.setItem("items", JSON.stringify(values))
-   },[values])
+   localStorage.setItem('input-value', values)
   return (
     <div>
         <form onSubmit={submit} className="form" >

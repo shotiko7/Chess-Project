@@ -2,15 +2,8 @@ import React from 'react'
 import "../Third/ThirdRight.css"
 import greenline from "../Third/assetsThird/greenline.png"
 import ThirdSelect from './ThirdSelect'
-import {
-    BrowserRouter as Router,
-    useNavigate,
-    Route,
-    Routes,
-  } from "react-router-dom";
 
 function ThirdRight() {
-    let navigateToSecond = useNavigate()
   return (
     <div>
         <div className='thirdright'>
@@ -33,18 +26,15 @@ function ThirdRight() {
             </div>
             <ThirdSelect />
             <div className='redberichampionship'>
-                <h3> Have you participated in the Redberry Championship? * </h3>
+                <h3> Have you participated in the Redberry Championship? </h3>
                 <div className='radiotype'>
-                    <input type="radio"  />
-                    <label> Yes </label>
-                    <input type="radio"  />
-                    <label> No </label>
+                    <input type="radio" id="yes" name="fav_language" value="Yes" />
+                    <label htmlFor="yes">Yes</label> <br/>
+                    <input type="radio" id="no" name="fav_language" value="No" />
+                    <label htmlFor="no">No</label> <br/>
                 </div>
             </div>
-            <div className='done'>
-                <button onClick={()=> navigateToSecond('/secondpage')} className='done1'> Back </button>
-                <button className='done2'> Done </button>
-            </div>
+            
         </div>
     </div>
   )

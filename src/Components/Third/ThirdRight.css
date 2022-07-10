@@ -185,7 +185,7 @@
     vertical-align: middle;
     background-color: #FFFFFF;
 }
-.done {
+/* .done {
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -211,4 +211,4 @@
     background: #212529;
     border-radius: 8px;
     color: white;
-}
+} */
