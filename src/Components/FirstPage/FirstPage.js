@@ -10,6 +10,7 @@ import Chess from './FirstPageAssets/Chess.png'
 import Header from './Header.js'
 import Next from "./FirstPageAssets/Next.png"
 
+
 function FirstPage() {
     let navigate = useNavigate()
   return (

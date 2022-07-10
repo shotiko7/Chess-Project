@@ -3,6 +3,7 @@
     height: 84px;
     background: #7025FB;
     display: flex;
+    display: flex;
     align-items: center;
 }
 .parentdivheader {
@@ -16,10 +17,17 @@
     position: absolute;
     width: 252.82px;
     height: 23.35px;
-    left: 22.93px;
-    top: 0px;
+    left: 60px;
+    top: -6px;
     color: #FFFFFF;
-    
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }
 .parentdivheader img {
     position: absolute;
@@ -28,6 +36,5 @@
     color: #FFFFFF;
     top: 0px;
     left: 50px;
-
-    
 }
+

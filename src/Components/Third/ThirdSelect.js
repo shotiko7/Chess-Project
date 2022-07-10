@@ -38,34 +38,34 @@ function ThirdSelect() {
       ];
 
     // datasend
+    
     const dataSend = {
-      name: `${localStorage.input.username}`,
-      email: `${localStorage.input['email']}`,
-      phone: `${localStorage.input.date}`,
-      data_of_birth: `${localStorage.input.date}`,
-      experince_level: `${localStorage.level}`,
-      character_id: `${localStorage.select}`
+      "name": `${localStorage.name}`, 
+      "email": `${localStorage.email}`,
+      "phone": `${localStorage.number}`,
+      "date_of_birth": `${localStorage.data}`,
+      "experience_level": `${localStorage.level}`,
+      "already_participated" : true,
+      "character_id": `${localStorage.select}`
     }
+    
+    
     const onClickNext =(e)=>{
       if(level && selected ){
-        console.log(selected, level)
         localStorage.setItem('level', JSON.stringify(level))
         localStorage.setItem('select', JSON.stringify(selected))
-        // console.log(localStorage);
         navigateToFourth('/fourthpage')
+        fetch('https://chess-tournament-api.devtest.ge/api/register',{
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dataSend)
+      }).then((response) => console.log(response))
+        .catch(error =>{
+          console.log(error)
+        })
       }
-      
-      // fetch('https://chess-tournament-api.devtest.ge/api/register',{
-      //   method: 'post',
-      //   body: JSON.stringify(dataSend),
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      // })
-      //   .then((response) => console.log(response))
-      console.log(dataSend)
-      console.log(localStorage.input['username'])
-      
     }
     const [hidePhoto, setHidePhoto] = useState(false)
     const [selected, setSelected] = useState('')
