@@ -1,8 +1,14 @@
 import React from 'react'
+import ".//Err.css"
+import errorlogo from "../Components/assets/error.jpg"
 
 function Err() {
   return (
-    <div>Error Page ! </div>
+    <div>
+      <div className='img'>
+        <img src={errorlogo} alt='errorlogo' />
+      </div>
+    </div>
   )
 }
 

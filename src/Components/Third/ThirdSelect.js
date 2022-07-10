@@ -7,11 +7,19 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
+import axios, { Axios } from 'axios';
 
 function ThirdSelect() {
+  
   let navigateToSecond = useNavigate()
   let navigateToFourth = useNavigate()
     const options = [
+        {
+          id: 10,
+          label: 'level of knowledge',
+          value: 'level of knowledge',
+
+        },
         {
           label: "Beginner",
           value: "Beginner",
@@ -28,14 +36,36 @@ function ThirdSelect() {
           id: 3
         },
       ];
+
+    // datasend
+    const dataSend = {
+      name: `${localStorage.input.username}`,
+      email: `${localStorage.input['email']}`,
+      phone: `${localStorage.input.date}`,
+      data_of_birth: `${localStorage.input.date}`,
+      experince_level: `${localStorage.level}`,
+      character_id: `${localStorage.select}`
+    }
     const onClickNext =(e)=>{
-      if(level !== '' & selected !== ""){
+      if(level && selected ){
         console.log(selected, level)
-        localStorage.setItem('level', level)
-        localStorage.setItem('select', selected)
-        console.log(localStorage);
+        localStorage.setItem('level', JSON.stringify(level))
+        localStorage.setItem('select', JSON.stringify(selected))
+        // console.log(localStorage);
+        navigateToFourth('/fourthpage')
       }
-      navigateToFourth('/fourthpage')
+      
+      // fetch('https://chess-tournament-api.devtest.ge/api/register',{
+      //   method: 'post',
+      //   body: JSON.stringify(dataSend),
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      // })
+      //   .then((response) => console.log(response))
+      console.log(dataSend)
+      console.log(localStorage.input['username'])
+      
     }
     const [hidePhoto, setHidePhoto] = useState(false)
     const [selected, setSelected] = useState('')
@@ -65,12 +95,12 @@ function ThirdSelect() {
           setDataList(data)
       });
     }, [])
-  
+   
   return (
     <div className='select'>
         <select value={level} onChange={onChangeLevel}> 
             {options.map(option =>
-                <option key={option.id} value={option.value}> {option.label} </option>
+                <option  key={option.id} value={option.value}> {option.label} </option>
             )}
         </select>
         <div className='select2'>

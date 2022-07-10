@@ -59,12 +59,13 @@ function Form() {
         e.preventDefault()
         navigate('/thirdpage')
         console.log(values)
-        localStorage.setItem('input-value', JSON.stringify(values))
+        localStorage.setItem('input', JSON.stringify(values))
    }
+   localStorage.getItem('input');
    const onChange =(e)=>{
     setValues({...values, [e.target.name]: e.target.value})
    }
-   localStorage.setItem('input-value', values)
+   localStorage.setItem('input', values)
   return (
     <div>
         <form onSubmit={submit} className="form" >
